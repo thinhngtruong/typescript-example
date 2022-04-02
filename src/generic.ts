@@ -62,3 +62,11 @@ const resource3: Resource<string[]> = {
   name: 'Thinh',
   data: ['Honda', 'Suzuki', 'Yamaha'],
 };
+
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+
+let x = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+
+console.log(getProperty(x, 'a'));
